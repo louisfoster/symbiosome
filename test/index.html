@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+		html, body, #root
+		{
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background: black;
+		}
+
+		.block
+		{
+			border: 1px solid black;
+			margin-bottom: 2rem;
+			background: white;
+		}
+
+		.messages
+		{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+	</style>
+
+</head>
+
+<body id="body">
+
+	<div class="messages">
+		<div class="block">
+			<div class="block">
+				<p>Create context</p>
+				<input type="text" id="input-add" />
+				<button type="button" id="add">Add</button>
+			</div>
+
+			<div class="block">
+				<p>Listen to context</p>
+				<input type="text" id="input-listen" />
+				<button type="button" id="listen">Listen</button>
+			</div>
+
+			<div class="block">
+				<p>Send message</p>
+				<select id="origin-select">
+				</select>
+				<input type="text" id="input-send" />
+				<button type="button" id="send">Send</button>
+				<button type="button" id="send-data">Send Data</button>
+			</div>
+		</div>
+		<div class="block">
+			<div class="block">
+				<p>Listening to origins</p>
+				<div id="listeners"></div>
+			</div>
+			<div class="block">
+				<p>Connect to portals</p>
+				<div id="portals"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="messages">
+		<div class="block">
+			<p>Incoming messages</p>
+			<div id="in-message"></div>
+		</div>
+		<div class="block">
+			<p>Outgoing messages</p>
+			<div id="out-message"></div>
+		</div>
+	</div>
+
+	<script type="module">
+		import {BasicExample} from "./basic-example.js"
+
+		new BasicExample()
+	</script>
+
+</body>
+
+</html>

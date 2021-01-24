@@ -1,0 +1,26 @@
+{
+    "mount": {
+        "test": "/",
+        "src": "/"
+    },
+    "plugins": [
+        [
+            "@snowpack/plugin-run-script",
+            {
+                "cmd": "tsc --build tsconfig.json",
+				"watch": "$1 --watch"
+            }
+        ]
+    ],
+	"experiments": {
+		"optimize": {
+			"entrypoints": ["symbiosome.js"],
+			"bundle": true,
+			"minify": true,
+			"target": "es2020"
+		}
+	},
+    "installOptions": {
+        "installTypes": true
+    }
+}

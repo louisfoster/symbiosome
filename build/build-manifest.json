@@ -1,0 +1,22 @@
+{
+  "inputs": {
+    "symbiosome.js": {
+      "bytes": 4519,
+      "imports": []
+    }
+  },
+  "outputs": {
+    "../node_modules/.cache/snowpack/~~bundle~~/symbiosome.js": {
+      "imports": [],
+      "exports": [
+        "Symbiosome"
+      ],
+      "inputs": {
+        "symbiosome.js": {
+          "bytesInOutput": 3101
+        }
+      },
+      "bytes": 3126
+    }
+  }
+}
