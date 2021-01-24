@@ -68,6 +68,9 @@ export class BasicExample implements SymbiosomeContext
 
 		this.onListenerRemoved = this.onRemovedListener
 
+		// Uncomment to see debug logs in developer console
+		// this.debug = this.handleDebug
+
 		this.el = {
 			input_add: document.querySelector( `#input-add` ),
 			add: document.querySelector( `#add` ),
